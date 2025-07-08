@@ -1,0 +1,45 @@
+<div class="container">
+
+    <div class="row my-2">
+        <div class="col d-flex justify-content-center">
+            <a id="offer-tasks-button" routerLink="/offer-tasks" class="btn btn-primary">Offer Tasks</a>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col d-flex justify-content-center">
+            <a routerLink="/shopping" class="btn btn-primary">Shopping</a>
+        </div>
+    </div>
+
+    <div class="row my-2 d-flex justify-content-center" *ngFor ="let myOrder of orders">
+        
+        <div class="col-6 d-flex justify-content-center">
+            <label>Your {{myOrder.product}} are in state {{myOrder.state}}</label>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center my-2">
+        <div class="col d-flex justify-content-center">
+            On sale today:
+        </div>
+    </div>
+
+    <a class="row my-2 d-flex justify-content-center" [routerLink]="['/home/order', myOffer.product]" *ngFor="let myOffer of offers">
+
+        <div class="col-4 d-flex justify-content-center">
+            <label>We offer {{myOffer.amount}} </label>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+            <label>{{myOffer.product}}</label>
+        </div>
+        <div class="col-2 d-flex ">
+            <label>${{myOffer.price}}</label>
+        </div>
+    </a>
+
+    <div class="row my-2">
+        <pre>
+            {{debugString}}
+        </pre>
+    </div>
+</div>

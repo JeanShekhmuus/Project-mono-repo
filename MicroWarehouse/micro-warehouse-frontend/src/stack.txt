@@ -1,0 +1,24 @@
+
+app.listen(3000) {
+    ...
+    while(true) {
+        Event e = eventQueue.pol();
+        handle(e)
+    }
+}
+
+#901.resolve() {
+    => console.log(`appController.getQuery called with key ${key}`)
+    => const result : Promise<any> = this.appService.getQuery(key);
+
+}
+
+#902.resolve() {
+    => console.log(`appService getQuery start`)
+    => const list = await this.modelBuilderService.getByTag(key);
+}
+
+#903.resolve() {
+    => console.log(`builder service getByTag called`)
+    => const list = this.buildEventModel.find({tags: tag}).exec();
+}

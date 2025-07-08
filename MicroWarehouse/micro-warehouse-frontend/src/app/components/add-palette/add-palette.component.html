@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row d-flex justify-content-center my-2">
+    <div class="col d-flex justify-content-center">
+      Store new palette:
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center my-2">
+    <div class="col d-flex justify-content-center">
+      <input id="barcodeInput" placeholder="barcode" [(ngModel)]="barcode"/>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center my-2">
+    <div class="col d-flex justify-content-center">
+      <input id="productInput" placeholder="product" [(ngModel)]="product"/>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center my-2">
+    <div class="col d-flex justify-content-center">
+      <input id="amountInput" placeholder="amount" [(ngModel)]="amount"/>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center my-2">
+    <div class="col d-flex justify-content-center">
+      <input id="locationInput" placeholder="location" [(ngModel)]="location"/>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center my-2">
+    <div class="col d-flex justify-content-center">
+      <button id="addPalette" class="btn btn-primary" (click)="addPalette()">Add</button>
+    </div>
+  </div>
+</div>

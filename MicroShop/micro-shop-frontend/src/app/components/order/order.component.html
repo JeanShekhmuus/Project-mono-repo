@@ -1,0 +1,44 @@
+<form [formGroup]="formGroup" (ngSubmit)="submitOffer()">
+    <div class="container">
+        <div class="row d-flex justify-content-center my-2">
+            <div class="col d-flex justify-content-center">
+                Order details:
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center my-2">
+            <div class="col d-flex justify-content-center">
+                <input id="orderInput" type="text" placeholder="order id?" formControlName="order">
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center my-2">
+            <div class="col d-flex justify-content-center">
+                <input id="productInput" type="text" placeholder="product?" formControlName="product">
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center my-2">
+            <div class="col d-flex justify-content-center">
+                <input id="customerInput" type="text" placeholder="your name?" formControlName="customer">
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center my-2">
+            <div class="col d-flex justify-content-center">
+                <input id="addressInput" type="text" placeholder="your address?" formControlName="address">
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center my-2">
+            <div class="col d-flex justify-content-center">
+                <button id="submitOrderButton" type="submit" [disabled]="!formGroup.valid" 
+                    class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+
+        <p>{{debugOut}}</p>
+
+    </div>
+
+</form>

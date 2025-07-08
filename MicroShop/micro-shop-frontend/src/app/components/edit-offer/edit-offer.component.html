@@ -1,0 +1,41 @@
+<form [formGroup]="formGroup" (ngSubmit)="submitOffer()">
+    <div class="container">
+        <div class="row d-flex justify-content-center my-2">
+            <div class="col d-flex justify-content-center">
+                Edit offer:
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center my-2">
+            <div class="col d-flex justify-content-center">
+                <input id="productNameInput" type="text" placeholder="product name?" formControlName="productName">
+            </div>
+        </div>
+
+        <div *ngIf="formGroup.get('productName')?.errors && formGroup.get('productName')?.dirty"
+                class="row d-flex justify-content-center my-2">
+            <div class="col d-flex justify-content-center">
+                name should be in jeans, tshirt
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center my-2">
+            <div class="col d-flex justify-content-center">
+                <input id="price" type="text" placeholder="price?" formControlName="productPrice">
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center my-2">
+            <div class="col d-flex justify-content-center">
+                <button id="submitOfferButton" type="submit" [disabled]="!formGroup.valid"
+                    class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+
+
+        <p>{{formGroup.status}} {{formGroup.errors}}</p>
+
+        <p>{{debugOut}}</p>
+        
+    </div>
+</form>

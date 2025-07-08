@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\MicroTests",
+    "\\MicroWarehouse",
+    "\\MicroWarehouse\\micro-warehouse-backend",
+    "\\MicroWarehouse\\micro-warehouse-backend\\src",
+    "\\MicroWarehouse\\micro-warehouse-backend\\src\\modules",
+    "\\MicroWarehouse\\micro-warehouse-backend\\src\\modules\\builder",
+    "\\MicroWarehouse\\micro-warehouse-frontend\\src",
+    "\\MicroWarehouse\\micro-warehouse-frontend\\src\\app",
+    "\\MicroWarehouse\\micro-warehouse-frontend\\src\\app\\component",
+    "\\MicroWarehouse\\micro-warehouse-frontend\\src\\app\\component\\store-tasks"
+  ],
+  "SelectedNode": "\\MicroWarehouse\\micro-warehouse-backend\\src\\modules\\builder\\builder.service.ts",
+  "PreviewInSolutionExplorer": false
+}

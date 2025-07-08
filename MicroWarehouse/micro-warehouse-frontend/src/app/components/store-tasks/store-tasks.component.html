@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row my-2">
+    <div class="col d-flex justify-content-center">
+      Warehouse Palettes:
+    </div>
+  </div>
+
+  <div class="row my-2">
+    <div class="col d-flex justify-content-center">
+      <a id="add-button" class="btn btn-primary" routerLink="/store-tasks/add-palette">Add</a>
+    </div>
+  </div>
+
+  <div [id]="pal.barcode" class="row my-2 d-flex justify-content-center" *ngFor="let pal of palettes">
+    <div class="col-1 d-flex justify-content-center">
+      <label>{{pal.amount}}</label>
+    </div> 
+    <div class="col-4 d-flex justify-content-center">
+      <label>{{pal.product}}</label>
+    </div>
+    <div class="col-4 d-flex justify-content-center">
+      <label>{{pal.location}}</label>
+    </div>
+  </div>
+
+  <div class="row my-2">
+    <pre>{{storeTaskString}}</pre>
+  </div>
+</div>

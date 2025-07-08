@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row d-flex justify-content-center my-2">
+        <div class="col d-flex justify-content-center">
+            Offers overview:
+        </div>
+    </div>
+
+    <div class="row my-2">
+        <div class="col d-flex justify-content-center">
+            <a id="add-button" class="btn btn-primary" routerLink="/offer-tasks/edit-offer">Edit</a>
+        </div>
+    </div>
+
+
+    <div class="row my-2 d-flex justify-content-center" *ngFor="let myOffer of offers">
+        <div class="col-3 d-flex justify-content-center">
+            <label>We offer {{myOffer.name}}</label>
+        </div>
+        <div class="col-2 d-flex justify-content-center">
+            <label>{{myOffer.state}}</label>
+        </div>
+        <div class="col-1 d-flex justify-content-center">
+            <label>{{myOffer.price}}</label>
+        </div>
+    </div>
+
+    <div class="row my-2">
+        <pre>
+            {{storeTaskString}}
+        </pre>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+
+#900 : EventQueue
+[]
+
+#901 : Promise {
+    resolve: 
+        console.log(`appController.getQuery called with key ${key}`)
+        const result : Promise<any> = this.appService.getQuery(key);
+
+    then:
+        console.log(`appController.getQuery done ${JSON.stringify(result, null, 3)}\n`)
+        return result;
+
+    value:
+}
+
+#902 : Promise {
+    parent: #901
+    resolve: 
+        console.log(`appService getQuery start`)
+        const list = await this.modelBuilderService.getByTag(key);
+
+    then:
+        const answer = {
+            key: key,
+            result: list,
+        };
+
+        console.log(`appService getQuery end`)
+        return answer;
+
+    value:
+}
+
+#903 : Promise {
+    parent: #902
+    resolve: 
+        console.log(`builder service getByTag called`)
+        const list = this.buildEventModel.find({tags: tag}).exec();
+
+    then:
+        console.log(`builder service getByTag is done`)
+        return list;
+
+    value:
+}
+
+#904 : Promise {
+    parent: #903
+    resolve: 
+        this.buildEventModel.find({tags: tag}).exec();
+
+    then:
+
+    value:
+}
